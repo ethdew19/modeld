@@ -1,7 +1,7 @@
 # modeld
 
-Configure a **Glorious Model D** (wired, USB `258A:0033`) without Glorious Core: a Rust library,
-a command-line tool and a GUI. It talks to the mouse's firmware over HID feature reports (via
+A Rust library, command-line tool and GUI for configuring the **Glorious Model D** (wired, USB
+`258A:0033`) without Glorious Core. It talks to the mouse's firmware over HID feature reports (via
 [hidapi](https://crates.io/crates/hidapi)), so you don't need a driver or admin rights.
 
 The protocol was reverse engineered with help from Claude and is documented in
