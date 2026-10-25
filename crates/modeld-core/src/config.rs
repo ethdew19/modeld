@@ -8,12 +8,12 @@ use crate::{Error, Result, Rgb};
 
 /// Length of the config as the mouse returns it.
 pub const CONFIG_LEN: usize = 131;
-/// DPI stage slots in the firmware. Glorious Core only shows 6.
+/// DPI stage slots in the firmware. The official software only shows 6.
 pub const STAGES: usize = 8;
 pub const MIN_DPI: u16 = 100;
 /// The sensor's maximum (stored value 0x77).
 pub const MAX_DPI: u16 = 12000;
-/// Fastest lighting speed. Glorious Core stops at 3; above 5 the effects stop animating.
+/// Fastest lighting speed. The official software stops at 3; above 5 the effects stop animating.
 pub const MAX_SPEED: u8 = 5;
 
 const POLLING: usize = 10;
@@ -110,10 +110,10 @@ pub enum LightingMode {
     Breathing = 3,
     Tail = 4,
     SeamlessBreathing = 5,
-    /// Not in Glorious Core.
+    /// Not in the official software.
     Gradient = 6,
     Rave = 7,
-    /// Not in Glorious Core: a fast moving pattern with odd colours.
+    /// Not in the official software: a fast moving pattern with odd colours.
     Glitch = 8,
     Wave = 9,
     BreathingSingle = 10,
@@ -165,7 +165,7 @@ pub enum Direction {
     Up = 1,
 }
 
-// Per-mode settings. Brightness is 1-4 (25/50/75/100%), speed is 1-3 in Glorious Core but
+// Per-mode settings. Brightness is 1-4 (25/50/75/100%), speed is 1-3 in the official software but
 // the firmware goes up to MAX_SPEED (anything higher shows as a solid colour).
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

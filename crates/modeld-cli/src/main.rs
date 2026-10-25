@@ -14,7 +14,7 @@ usage: modeld <command>
   dpi <stage> <dpi> [y-dpi]     set a stage's DPI (stage 1-8, steps of 100);
                                 a different Y turns on XY independent
   xy <on|off>                   XY independent DPI (off keeps each stage's X)
-  stage <n> <on|off>            enable/disable a DPI stage (7 and 8 are hidden in Glorious Core)
+  stage <n> <on|off>            enable/disable a DPI stage (7 and 8 are hidden in the official software)
   stage-color <n> <rrggbb>      DPI light colour for a stage
   active <n>                    switch to a DPI stage
   poll <125|250|500|1000>       polling rate in Hz

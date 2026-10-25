@@ -1,4 +1,4 @@
-//! Talk to a Glorious Model D (USB `258A:0033`) without Glorious Core.
+//! Talk to a Glorious Model D (USB `258A:0033`) without Glorious' official software.
 //!
 //! - [`ModelD`] opens the mouse and moves bytes to and from it.
 //! - [`Config`] is the typed 131-byte settings blob (DPI, polling, lighting, ...).

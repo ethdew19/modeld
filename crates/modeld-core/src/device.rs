@@ -116,7 +116,7 @@ impl ModelD {
         self.write_data(&b)
     }
 
-    /// Debounce is write-only: `05 1a <ms / 2>`. Glorious Core sends it twice.
+    /// Debounce is write-only: `05 1a <ms / 2>`. The official software sends it twice.
     pub fn set_debounce(&self, ms: u8) -> Result<()> {
         if !(4..=16).contains(&ms) || !ms.is_multiple_of(2) {
             return Err(Error::Invalid(

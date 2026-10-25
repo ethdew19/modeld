@@ -1,15 +1,15 @@
 # modeld
 
 A Rust library, command-line tool and GUI for configuring the **Glorious Model D** (wired, USB
-`258A:0033`) without Glorious Core. It talks to the mouse's firmware over HID feature reports (via
+`258A:0033`) without the official software. It talks to the mouse's firmware over HID feature reports (via
 [hidapi](https://crates.io/crates/hidapi)), so you don't need a driver or admin rights.
 
 The protocol was reverse engineered with help from Claude and is documented in
-[PROTOCOL.md](PROTOCOL.md), including some things Glorious Core doesn't expose:
+[PROTOCOL.md](PROTOCOL.md), including some things the official software doesn't expose:
 
 - **8 DPI stages** instead of 6
 - two hidden lighting modes: a **static gradient** and **glitch**
-- lighting **speeds 4 and 5** (Glorious Core stops at 3), and **breathing with 1-7 colours**
+- lighting **speeds 4 and 5** (the official software stops at 3), and **breathing with 1-7 colours**
 - a lighting **master switch** that keeps your mode and colours
 
 ## Features
@@ -79,7 +79,7 @@ crates/
 
 ## Notes
 
-- **Close Glorious Core** while using this. It doesn't read settings from the mouse, and it
+- **Close the official Model D software** while using this. It doesn't read settings from the mouse, and it
   overwrites everything with its own copy the next time it saves.
 - Only tested on Windows 10 with the wired Model D. Other SinoWealth-based Glorious mice (Model
   O, Model D-) probably use a similar layout, but this crate only opens `258A:0033`.

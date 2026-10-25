@@ -8,7 +8,7 @@ const HEADER: usize = 8;
 /// Header + 20 slots.
 pub(crate) const BUTTONS_LEN: usize = HEADER + BUTTON_SLOTS * 4;
 
-/// Names of the first 6 slots, which are the physical buttons. Note that Glorious Core
+/// Names of the first 6 slots, which are the physical buttons. Note that the official software
 /// calls the front side button "button 4", which is slot 5 here.
 pub const PHYSICAL_BUTTONS: [&str; 6] = [
     "Left",
@@ -143,7 +143,7 @@ impl Buttons {
         })
     }
 
-    /// The table as Glorious Core writes it: `04 12 00 50` (0x50 = 80 bytes of slots).
+    /// The table as the official software writes it: `04 12 00 50` (0x50 = 80 bytes of slots).
     pub fn to_bytes(&self) -> Vec<u8> {
         let mut b = vec![0u8; BUTTONS_LEN];
         b[..4].copy_from_slice(&[0x04, 0x12, 0x00, (BUTTON_SLOTS * 4) as u8]);
