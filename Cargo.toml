@@ -1,7 +1,14 @@
-[package]
-name = "modeld"
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+rust-version = "1.88"
+authors = ["ethdew19"]
 
-[dependencies]
-hidapi = "2"
+[workspace.dependencies]
+modeld-core = { path = "crates/modeld-core" }
+hidapi = "2.6"

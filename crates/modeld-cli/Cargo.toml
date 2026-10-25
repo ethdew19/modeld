@@ -1,0 +1,15 @@
+[package]
+name = "modeld-cli"
+description = "Command-line tool to configure a Glorious Model D mouse"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "modeld"
+path = "src/main.rs"
+
+[dependencies]
+modeld-core.workspace = true
